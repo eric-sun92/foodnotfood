@@ -2,3 +2,6 @@ test.py
 test2.py
 .gitignore
 env
+data/imagenet_images/*
+data/non_food_images/*
+
