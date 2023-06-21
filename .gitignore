@@ -2,7 +2,9 @@ test.py
 test2.py
 .gitignore
 env
-data/imagenet_images/*
-data/non_food_images/*
+
+data/images/*
+data/model_test_images_split/*
+data/model_test_images/*
 
 ImageNet-Datasets-Downloader
