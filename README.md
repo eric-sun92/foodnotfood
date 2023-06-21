@@ -26,7 +26,9 @@ machine learning application to detect food or not food
 11. downloaded test images 
     - turns out the previous github didn't work for me (got a freeze()/fork() error)
     - used this github repo instead (https://github.com/skaldek/ImageNet-Datasets-Downloader)
+    - had to download images twice (first time, just downloaded empty folders for some reason)
 12. turned dict of non_food_class_ids to giant strings to pass into command line using $
     - turns out the string was too big (can't pass it all into command line easily)
 13. started downloading 50 random images of 1000 classes from imagenet random classes
 14. resorted to filtering the non_food images from backend
+15. now moving the images from /data/downlaoded_images folder to /data/model_test_images/split/(*test/train) using python/os pathing
