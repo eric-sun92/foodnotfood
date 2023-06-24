@@ -1,14 +1,17 @@
 # foodnotfood
 machine learning application to detect food or not food
 
-# Notes 
-1. start virtual environment with conda activate /Users/ericsun/Desktop/foodnotfood/env
+# Made By:
+1. Eric Sun
 
 # Steps:
 1. collect data - images of food and not food
     a. for images of not food: download from ImageNet
     b. for images of food: download from Food101
-2. 
+2. Build model
+3. Train it
+4. Write a basic web page encorporating the model
+5. Deploy 
 
 # Log:
 1. Trying to get nonfood images: downloaded imagenet class list from Github (https://gist.github.com/yrevar/942d3a0ac09ec9e5eb3a)
@@ -55,4 +58,10 @@ machine learning application to detect food or not food
     -evaluate when done to get accuracy (aiming for ~90%)
 26. model.save (https://www.tensorflow.org/tutorials/keras/save_and_load)
 27. convert to tflite model (https://www.tensorflow.org/lite/models/convert)
-28. wget https://storage.googleapis.com/food-vision-model-playground/food_not_food_model_v3.tflite
+28. This model is not ideal and does not work with tflite for some reason.
+29. Instead, downloaded food101 images and make a new model.
+30. can access it on my google cloud platform bucket using: wget https://storage.googleapis.com/food-vision-model-playground/food_not_food_model_v3.tflite in the command line
+31. deployed to vernel
+32. added some styling
+33. final thoughts- the model is not very accurate. Definetely overfitted - needs to be trained on more food images.
+34. I am pretty satisfied with this as my first web page ml project

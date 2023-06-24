@@ -93,4 +93,7 @@ h2 {
 #predicted_class,
 #predicted_probability {
   margin-top: 0;
+  font-weight: bold;
+  font-size: 14px;
+  color: rgb(63, 100, 185);
 }

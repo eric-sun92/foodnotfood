@@ -5,11 +5,14 @@ env
 
 data/food_images/*
 data/images/*
-data/model_test_images/*
-data/model_test_images_split/*
+data/model_test_images/airship/*
+data/model_test_images/anvil/*
 data/non_food_images/*
-data/test/*
-data/train/*
+data/test/food_images/*
+data/test/non_food_images/*
+data/train/food_images/*
+data/train/non_food_images/*
+
 
 ImageNet-Datasets-Downloader
 

@@ -7,6 +7,8 @@ const classes = {
   
   if(status) {
     status.innerText = "Loaded TensorFlow.js - version:" + tf.version.tfjs
+    status.style.color = "green"
+
   }
   
   let model
@@ -20,6 +22,7 @@ const classes = {
   
       if(tfliteModel) {
         model_status.innerText = "Model loaded"
+        model_status.style.color = "green"
       }
       
     } catch (error) {
