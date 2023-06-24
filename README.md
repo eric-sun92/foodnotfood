@@ -55,4 +55,4 @@ machine learning application to detect food or not food
     -evaluate when done to get accuracy (aiming for ~90%)
 26. model.save (https://www.tensorflow.org/tutorials/keras/save_and_load)
 27. convert to tflite model (https://www.tensorflow.org/lite/models/convert)
-28. 
+28. wget https://storage.googleapis.com/food-vision-model-playground/food_not_food_model_v3.tflite

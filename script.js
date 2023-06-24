@@ -1,8 +1,8 @@
 const classes = {
-    1: "food",
-    2: "not_food"
+    0: "food",
+    1: "not_food"
   }
-  console.log("test")
+
   const status = document.getElementById("status")
   
   if(status) {
@@ -14,7 +14,7 @@ const classes = {
   const loadModel = async () => {
     try {
       const tfliteModel = await tflite.loadTFLiteModel(
-        "/food_not_food_model_v2.tflite"
+        "/food_not_food_model_v4.tflite"
       )
       model = tfliteModel
   
@@ -36,14 +36,14 @@ const classes = {
     image = tf.cast(image, "int32")
   
     const output = model.predict(image)
-    console.log(output)
-    
-    const output_values = tf.softmax(output.arraySync()[0])
-    console.log(output.arraySync())
-    console.log(output.arraySync()[0])
-  
-    predicted_class.innerText = classes[output_values.argMax().arraySync()]
-    predicted_prob.innerText = output_values.max().arraySync() * 100 + "%"
+
+    const output_values = tf.sigmoid(output.arraySync()[0])
+
+    const predicted_class = document.getElementById("predicted_class")
+    const predicted_prob = document.getElementById("predicted_probability")
+
+    predicted_class.textContent = classes[output_values.argMax().arraySync()]
+    predicted_prob.textContent = Math.round(Math.max(...output.arraySync()[0]) / 256 * 100) + "%"
   
   }
   
