@@ -4,40 +4,49 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Tensorflow.js</title>
+  <title>Food Not Food</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-  <h1>Food Not Food</h1>
-  <p>This app will tell you if the image you upload is food or not.</p>
-  <p>Yes. That's it. It uses a computer vision deep learning model to classify your image as "food" or "not food"</p>
+  <header>
+    <h1>Is it Food?</h1>
+    <p style="font-size: 12px">by Eric Sun</p>
+    <p>This site uses a custom trained computer vision deep learning model to classify your image.</p>
+  </header>
 
-  <br>
-  <p>This line below will say loaded if TensorFlow.js is loaded:</p>
-  <p id="status">Awaiting TF.js</p>
-  <p id="model_status"> Awaiting TF.js model/TFLite model (wait about 1 minute)</p>
+  <main>
+    <div class="status-container">
+      <p class="status"  style="font-style: italic">Please do not upload image until both TF version and model are loaded:</p>
+      <p id="status"  style="font-size: 14px">Awaiting TF.js</p>
+      <p id="model_status"  style="font-size: 14px">Awaiting TF.js model/TFLite model (this may take a minute)</p>
+    </div>
 
-  <!-- Upload image -->
-  <br>
-  <p><label for="file">Upload Image</label></p>
-  <p><input type="file" accept="image/*" name="image" id="file-input"/></p>
-  <p><img id="image" width="200"/></p>
+    <!-- Upload image -->
+    <div class="upload" id="upload-container">
+      <label  style="font-size: 22px" for="file">Upload Image</label>
+      <input type="file" accept="image/*" name="image" id="file-input">
+      <img id="image" width="200">
+    </div>
 
-  <p>Predicted class:</p>
-  <p id="predicted_class"></p>
-  <p>Predicted probability:</p>
-  <p id="predicted_probability"></p>
+    <div class="prediction">
+      <h2>Prediction</h2>
+      <div class="prediction-result">
+        <p class="predicted-class-label">Predicted class:</p>
+        <p id="predicted_class"></p>
+        <p class="predicted-probability-label">Predicted probability:</p>
+        <p id="predicted_probability"></p>
+      </div>
+    </div>
+    <br/>
+    <div class="summary">
+      More info on how I created this site: https://github.com/eric-sun92/foodnotfood
+    </div>
+  </main>
 
-<script 
-src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"
-type="text/javascript"
-></script>
-  
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-tflite/dist/tf-tflite.min.js"></script>  
-  
-<script src="script.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-tflite/dist/tf-tflite.min.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>

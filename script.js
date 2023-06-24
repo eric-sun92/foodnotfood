@@ -87,3 +87,6 @@ const classes = {
   
   // Add listener to see if someone uploads an image
   fileInput.addEventListener("change", getImage);
+
+  
+  
