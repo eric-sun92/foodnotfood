@@ -1,5 +1,5 @@
-# foodnotfood
-machine learning application to detect food or not food
+# Is it Food? -  https://is-it-food.vercel.app/
+machine learning application to detect food or not food 
 
 # Made By:
 1. Eric Sun
